@@ -100,7 +100,7 @@
       <VanDatePicker
         v-model="currentDate"
         title="选择出生日期"
-        :min-date="new Date(1990, 0, 1)"
+        :min-date="minDate"
         :max-date="new Date()"
         @confirm="onConfirmDate"
         @cancel="showDatePicker = false"
@@ -139,8 +139,10 @@ import {
 const formRef = ref(null);
 const showDatePicker = ref(false);
 const showKindergartenPicker = ref(false);
+const currentYear = new Date().getFullYear();
+const minDate = ref(new Date(currentYear - 10, 0, 1)); // 当前年份往前10年
 // 使用数组格式的日期
-const currentDate = ref(['2000', '01', '01']);
+const currentDate = ref([currentYear.toString(), '01', '01']);
 
 const form = reactive({
   babyName: '',
@@ -216,8 +218,8 @@ const resetForm = () => {
   form.parentName = '';
   form.contactNumber = '';
   form.remarks = '';
-  // 保留日期和园所选择状态
-  currentDate.value = new Date();
+  // 重置为当前年份
+  currentDate.value = [currentYear.toString(), '01', '01'];
 };
 </script>
 
