@@ -12,7 +12,10 @@
       class="registration-form"
     >
       <div class="form-group">
-        <div class="form-label">宝宝信息</div>
+        <div class="form-label">
+          <span class="label-icon"><van-icon name="smile-o" /></span>
+          <span>宝宝信息</span>
+        </div>
         <VanCellGroup inset>
           <VanField
             v-model="form.babyName"
@@ -38,12 +41,19 @@
             :model-value="form.birthDate ? formatDate(form.birthDate) : ''"
             placeholder="点击选择日期"
             @click="openDatePicker"
-          />
+          >
+            <template #right-icon>
+              <van-icon name="calendar-o" class="field-icon" />
+            </template>
+          </VanField>
         </VanCellGroup>
       </div>
 
       <div class="form-group">
-        <div class="form-label">家长信息</div>
+        <div class="form-label">
+          <span class="label-icon"><van-icon name="friends-o" /></span>
+          <span>家长信息</span>
+        </div>
         <VanCellGroup inset>
           <VanField
             v-model="form.parentName"
@@ -62,12 +72,19 @@
               { required: true, message: '请输入联系方式' },
               { validator: validatePhone, message: '请输入正确的手机号码' }
             ]"
-          />
+          >
+            <template #right-icon>
+              <van-icon name="phone-o" class="field-icon" />
+            </template>
+          </VanField>
         </VanCellGroup>
       </div>
 
       <div class="form-group">
-        <div class="form-label">预约信息</div>
+        <div class="form-label">
+          <span class="label-icon"><van-icon name="location-o" /></span>
+          <span>预约信息</span>
+        </div>
         <VanCellGroup inset>
           <VanField
             readonly
@@ -76,7 +93,11 @@
             :model-value="form.kindergarten ? getKindergartenLabel(form.kindergarten) : ''"
             placeholder="点击选择园所"
             @click="showKindergartenPicker = true"
-          />
+          >
+            <template #right-icon>
+              <van-icon name="arrow-down" class="field-icon" />
+            </template>
+          </VanField>
 
           <VanField
             v-model="form.remarks"
@@ -91,7 +112,10 @@
       </div>
 
       <div class="submit-area">
-        <VanButton round block type="primary" native-type="submit" class="submit-button">提交报名</VanButton>
+        <VanButton round block type="primary" native-type="submit" class="submit-button">
+          <template #icon><van-icon name="checked" /></template>
+          提交报名
+        </VanButton>
       </div>
     </VanForm>
 
@@ -231,27 +255,14 @@ const resetForm = () => {
   padding-bottom: 2rem;
 }
 
-.banner {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .form-header {
   text-align: center;
   margin: 1.5rem auto;
   padding: 0 1rem;
   .icon {
-    color: #f74d19;
-    font-size: 24px;
+    color: #4fc08d;
+    font-size: 28px;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -269,18 +280,38 @@ const resetForm = () => {
 
 .form-group {
   margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .form-label {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  
+  .label-icon {
+    margin-right: 0.5rem;
+    color: #4fc08d;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .registration-form {
   padding: 0 1rem;
+}
+
+.field-icon {
+  color: #999;
+  font-size: 1.2rem;
 }
 
 .submit-area {
@@ -293,12 +324,19 @@ const resetForm = () => {
   font-size: 1rem;
   background-color: #4fc08d;
   border-color: #4fc08d;
+  box-shadow: 0 4px 12px rgba(79, 192, 141, 0.3);
+  transition: all 0.3s ease;
+  
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(79, 192, 141, 0.2);
+  }
 }
 
 .contact-info {
   background-color: white;
   padding: 1.5rem;
-  margin: 0 1rem;
+  margin: 1.5rem 0;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -308,6 +346,19 @@ const resetForm = () => {
   font-weight: bold;
   color: #333;
   margin-bottom: 1rem;
+  position: relative;
+  padding-left: 0.8rem;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    height: 1rem;
+    width: 3px;
+    background-color: #4fc08d;
+    border-radius: 3px;
+  }
 }
 
 .contact-item {
@@ -326,11 +377,17 @@ const resetForm = () => {
 /* 自定义 Vant 组件样式 */
 :deep(.van-cell) {
   padding: 15px 16px;
+  transition: background-color 0.2s;
+  
+  &:active {
+    background-color: #f8f8f8;
+  }
 }
 
 :deep(.van-field__label) {
   width: 80px;
   color: #333;
+  font-weight: 500;
 }
 
 :deep(.van-radio__label) {
@@ -340,6 +397,20 @@ const resetForm = () => {
 :deep(.van-cell-group--inset) {
   margin: 0;
   border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .register-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .form-header {
+    margin: 2rem auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -359,10 +430,21 @@ const resetForm = () => {
 
 :deep(.van-picker-column__item--selected) {
   color: #4fc08d;
+  font-weight: 500;
 }
 
 :deep(.van-picker__title) {
   font-size: 16px;
   font-weight: bold;
+}
+
+:deep(.van-radio__icon--checked .van-icon) {
+  background-color: #4fc08d;
+  border-color: #4fc08d;
+}
+
+:deep(.van-button--primary) {
+  background-color: #4fc08d;
+  border-color: #4fc08d;
 }
 </style>

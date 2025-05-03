@@ -1,14 +1,22 @@
 <template>
   <div class="intro-container">
-    <h2 class="page-title">园所介绍</h2>
+    <div class="intro-header">
+      <h2 class="page-title">园所介绍</h2>
+      <div class="title-decoration">
+        <span class="line"></span>
+        <span class="dot"></span>
+        <span class="line"></span>
+      </div>
+    </div>
     
     <!-- 园所概况 -->
     <div class="content-section">
       <div class="image-placeholder">
-        <img src="./../../public/intro/intro-1.jpg" alt="启智幼儿园外观" />
+        <img src="/intro/intro-1.jpg" alt="启智幼儿园外观" />
       </div>
       <div class="text-content">
-        <h3>关于启稚幼儿园</h3>
+        <h3 class="section-subtitle">关于启稚幼儿园</h3>
+        <div class="text-divider"></div>
         <p>
           启稚幼儿园创办于2016年，是一所具备高品质、国际化、设备先进、教学领先的蒙台梭利双语幼儿园。
           2017年，启稚幼儿园被评选为重庆市一级幼儿园，并且连续8年荣获幼儿园保育教育质量评价考核一等奖。
@@ -23,7 +31,13 @@
     <!-- 蒙台梭利教育体系 -->
     <div class="montessori-section section-block">
       <h3 class="section-title">蒙台梭利教育纵深发展体系</h3>
+      <div class="title-decoration small">
+        <span class="line"></span>
+        <span class="dot"></span>
+        <span class="line"></span>
+      </div>
       <p class="section-intro">基于"早期教育生态链"理论框架，启稚采用多维度一体化成长模型：</p>
+      
       <div class="education-stages">
         <div class="stage-card">
           <div class="stage-header">
@@ -60,9 +74,14 @@
     <!-- 师资培育系统 -->
     <div class="teachers-section section-block">
       <h3 class="section-title">师资培育系统</h3>
+      <div class="title-decoration small">
+        <span class="line"></span>
+        <span class="dot"></span>
+        <span class="line"></span>
+      </div>
       <div class="teachers-content">
         <div class="teacher-image">
-          <img src="./../../public/intro/intro-6.jpg" alt="教师团队" />
+          <img src="/intro/intro-6.jpg" alt="教师团队" />
         </div>
         <div class="teacher-desc">
           <p>
@@ -75,6 +94,11 @@
     <!-- 教育空间赋能系统 -->
     <div class="space-section section-block">
       <h3 class="section-title">教育空间赋能系统</h3>
+      <div class="title-decoration small">
+        <span class="line"></span>
+        <span class="dot"></span>
+        <span class="line"></span>
+      </div>
       <p class="section-intro">园所以蒙台梭利"有准备的环境"理论为指导，打造4000㎡智慧教学综合体：</p>
       
       <div class="space-categories">
@@ -121,19 +145,19 @@
       
       <div class="space-gallery">
         <div class="gallery-item">
-          <img src="./../../public/intro/intro-2.jpg" alt="蒙氏教室" />
+          <img src="/intro/intro-2.jpg" alt="蒙氏教室" />
           <div class="gallery-caption">蒙氏教室</div>
         </div>
         <div class="gallery-item">
-          <img src="./../../public/intro/intro-5.jpg" alt="户外活动区" />
+          <img src="/intro/intro-5.jpg" alt="户外活动区" />
           <div class="gallery-caption">户外活动区</div>
         </div>
         <div class="gallery-item">
-          <img src="./../../public/intro/intro-4.jpg" alt="创意美劳馆" />
+          <img src="/intro/intro-4.jpg" alt="创意美劳馆" />
           <div class="gallery-caption">创意美劳馆</div>
         </div>
         <div class="gallery-item">
-          <img src="./../../public/intro/intro-3.jpg" alt="科学实验馆" />
+          <img src="/intro/intro-3.jpg" alt="科学实验馆" />
           <div class="gallery-caption">科学实验馆</div>
         </div>
       </div>
@@ -142,35 +166,42 @@
     <!-- 教育使命与理念 -->
     <div class="mission-section section-block">
       <h3 class="section-title">教育使命与理念</h3>
-      
-      <div class="mission-card">
-        <h4 class="mission-title">
-          <Icon name="aim" color="#409EFF" />
-          教育使命
-        </h4>
-        <p class="mission-content">
-          以蒙台梭利"全人教育"为原点，守护每个孩子与生俱来的探索热忱，赋能他们成为自主的学习者、文化的传承者、世界的对话者。
-        </p>
+      <div class="title-decoration small">
+        <span class="line"></span>
+        <span class="dot"></span>
+        <span class="line"></span>
       </div>
       
-      <div class="mission-card">
-        <h4 class="mission-title">
-          <Icon name="bulb-o" color="#409EFF" />
-          办园理念
-        </h4>
-        <p class="mission-content">
-          "以爱为本、用心教育"潜心打造符合孩子成长发展的完备环境，陪伴孩子健康快乐成长。
-        </p>
-      </div>
-      
-      <div class="mission-card">
-        <h4 class="mission-title">
-          <Icon name="flag-o" color="#409EFF" />
-          发展目标
-        </h4>
-        <p class="mission-content">
-          以0-6岁蒙氏全链课程为核心，构建学术力、品格力、文化力三维赋能模型，助力儿童成为兼具中华底蕴与国际竞争力的未来世界公民。
-        </p>
+      <div class="mission-cards">
+        <div class="mission-card">
+          <h4 class="mission-title">
+            <Icon name="aim" color="#409EFF" />
+            教育使命
+          </h4>
+          <p class="mission-content">
+            以蒙台梭利"全人教育"为原点，守护每个孩子与生俱来的探索热忱，赋能他们成为自主的学习者、文化的传承者、世界的对话者。
+          </p>
+        </div>
+        
+        <div class="mission-card">
+          <h4 class="mission-title">
+            <Icon name="bulb-o" color="#409EFF" />
+            办园理念
+          </h4>
+          <p class="mission-content">
+            "以爱为本、用心教育"潜心打造符合孩子成长发展的完备环境，陪伴孩子健康快乐成长。
+          </p>
+        </div>
+        
+        <div class="mission-card">
+          <h4 class="mission-title">
+            <Icon name="flag-o" color="#409EFF" />
+            发展目标
+          </h4>
+          <p class="mission-content">
+            以0-6岁蒙氏全链课程为核心，构建学术力、品格力、文化力三维赋能模型，助力儿童成为兼具中华底蕴与国际竞争力的未来世界公民。
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -185,59 +216,101 @@ import { Icon } from 'vant';
 .intro-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 15px 30px;
+  padding: 15px 15px 30px;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.intro-header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .page-title {
-  text-align: center;
-  margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: 600;
   color: #409EFF;
-  position: relative;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
-.page-title:after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 3px;
+.title-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.title-decoration.small {
+  margin: 5px auto 20px;
+}
+
+.line {
+  height: 1px;
+  width: 40px;
   background-color: #409EFF;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+}
+
+.title-decoration.small .line {
+  width: 30px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #409EFF;
+  margin: 0 8px;
+}
+
+.title-decoration.small .dot {
+  width: 4px;
+  height: 4px;
 }
 
 .section-block {
   margin-bottom: 3rem;
   background-color: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
 }
 
 .section-title {
   text-align: center;
   color: #409EFF;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 10px;
+  margin-bottom: 0.8rem;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.section-title:after {
-  content: '';
-  position: absolute;
+.section-subtitle {
+  color: #409EFF;
+  margin-bottom: 0.8rem;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+
+.text-divider {
   width: 40px;
   height: 2px;
   background-color: #409EFF;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 10px 0 15px;
 }
 
 .section-intro {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
   color: #666;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* 园所概况 */
@@ -246,32 +319,37 @@ import { Icon } from 'vant';
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 3rem;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .image-placeholder {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .image-placeholder img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-placeholder:hover img {
+  transform: scale(1.03);
 }
 
 .text-content {
-  line-height: 1.6;
-}
-
-.text-content h3 {
-  margin: 1.5rem 0 1rem;
-  color: #409EFF;
+  line-height: 1.7;
 }
 
 .text-content p {
   margin-bottom: 1rem;
+  color: #555;
 }
 
 /* 蒙台梭利教育体系 */
@@ -283,9 +361,14 @@ import { Icon } from 'vant';
 
 .stage-card {
   background-color: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.stage-card:hover {
+  transform: translateY(-5px);
 }
 
 .stage-header {
@@ -303,20 +386,22 @@ import { Icon } from 'vant';
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: bold;
+  box-shadow: 0 2px 5px rgba(64, 158, 255, 0.3);
 }
 
 .stage-title {
   margin: 0;
   color: #333;
+  font-weight: 600;
 }
 
 .stage-content {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 
 .stage-content p {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
 }
 
@@ -329,21 +414,29 @@ import { Icon } from 'vant';
 
 .teacher-image {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .teacher-image img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.teacher-image:hover img {
+  transform: scale(1.03);
 }
 
 .teacher-desc {
   background-color: #f8f9fa;
   padding: 1.5rem;
-  border-radius: 8px;
-  line-height: 1.6;
+  border-radius: 10px;
+  line-height: 1.7;
+  color: #555;
+  border-left: 3px solid #409EFF;
 }
 
 /* 教育空间赋能系统 */
@@ -356,8 +449,14 @@ import { Icon } from 'vant';
 
 .space-category {
   background-color: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.5rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.space-category:hover {
+  transform: translateY(-5px);
 }
 
 .category-title {
@@ -367,6 +466,7 @@ import { Icon } from 'vant';
   margin-top: 0;
   margin-bottom: 1rem;
   color: #333;
+  font-weight: 600;
 }
 
 .space-list {
@@ -378,8 +478,9 @@ import { Icon } from 'vant';
 .space-list li {
   position: relative;
   padding-left: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   line-height: 1.5;
+  color: #555;
 }
 
 .space-list li:before {
@@ -397,34 +498,58 @@ import { Icon } from 'vant';
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .gallery-item {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 .gallery-caption {
   background-color: #f8f9fa;
-  padding: 0.5rem;
+  padding: 0.7rem;
   text-align: center;
   color: #555;
   font-size: 0.9rem;
+  border-top: 1px solid #eee;
 }
 
 /* 教育使命与理念 */
+.mission-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .mission-card {
   background-color: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .mission-title {
@@ -434,17 +559,20 @@ import { Icon } from 'vant';
   margin-top: 0;
   margin-bottom: 1rem;
   color: #333;
+  font-weight: 600;
 }
 
 .mission-content {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #555;
 }
 
+/* 响应式设计 */
 @media (min-width: 768px) {
   .content-section {
     flex-direction: row;
+    align-items: center;
   }
   
   .image-placeholder {
@@ -458,6 +586,7 @@ import { Icon } from 'vant';
   
   .education-stages {
     flex-direction: row;
+    gap: 1rem;
   }
   
   .stage-card {
@@ -475,18 +604,48 @@ import { Icon } from 'vant';
   
   .teacher-desc {
     flex: 1;
+    margin-left: 2rem;
   }
   
   .space-categories {
     flex-direction: row;
+    gap: 1rem;
   }
   
   .space-category {
     flex: 1;
   }
   
+  .mission-cards {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .mission-card {
+    flex: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-container {
+    padding: 0 10px 20px;
+  }
+  
+  .page-title {
+    font-size: 22px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+  
+  .section-block {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
   .space-gallery {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 </style>
