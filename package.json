@@ -1,0 +1,38 @@
+{
+  "name": "qizhi-wechat-official-account",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vant": "^4.8.1",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^9.26.0",
+    "eslint-plugin-vue": "^10.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "sass": "^1.87.0",
+    "vite": "^4.4.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/vue3-recommended"
+    ],
+    "rules": {
+      "vue/valid-v-model": [
+        "error",
+        {
+          "allowModifiers": true,
+          "allowArguments": true
+        }
+      ]
+    }
+  }
+}
