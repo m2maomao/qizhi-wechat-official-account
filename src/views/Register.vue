@@ -179,10 +179,10 @@ const form = reactive({
 });
 
 const kindergartenOptions = [
-  { value: '总园', label: '启智幼儿园（总园）', text: '启智幼儿园（总园）' },
-  { value: '东区分园', label: '启智幼儿园（东区分园）', text: '启智幼儿园（东区分园）' },
-  { value: '西区分园', label: '启智幼儿园（西区分园）', text: '启智幼儿园（西区分园）' },
-  { value: '南区分园', label: '启智幼儿园（南区分园）', text: '启智幼儿园（南区分园）' }
+  { value: '总园', label: '启稚幼儿园（总园）', text: '启稚幼儿园（总园）' },
+  { value: '东区分园', label: '启稚幼儿园（东区分园）', text: '启稚幼儿园（东区分园）' },
+  { value: '西区分园', label: '启稚幼儿园（西区分园）', text: '启稚幼儿园（西区分园）' },
+  { value: '南区分园', label: '启稚幼儿园（南区分园）', text: '启稚幼儿园（南区分园）' }
 ];
 
 const validatePhone = (val) => {

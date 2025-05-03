@@ -11,7 +11,7 @@
     
     <div class="honor-content">
       <div class="honor-description">
-        <p>启智幼儿园凭借优质的教育理念和卓越的教学成果，荣获"市级示范幼儿园"称号，这是对我们多年来坚持高品质教育的肯定与认可。</p>
+        <p>启稚幼儿园凭借优质的教育理念和卓越的教学成果，荣获"市级示范幼儿园"称号，这是对我们多年来坚持高品质教育的肯定与认可。</p>
       </div>
       
       <div class="honor-image-wrapper">

@@ -15,7 +15,7 @@
     <!-- 园所概况 -->
     <div class="content-section animate-entry fade-up">
       <div class="image-placeholder parallax-element" data-speed="0.15">
-        <img src="/intro/intro-1.jpg" alt="启智幼儿园外观" class="scale-on-scroll" />
+        <img src="/intro/intro-1.jpg" alt="启稚幼儿园外观" class="scale-on-scroll" />
       </div>
       <div class="text-content">
         <h3 class="section-subtitle animate-entry slide-right">关于启稚幼儿园</h3>
