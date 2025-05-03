@@ -7,17 +7,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-
-onMounted(() => {
-  // 默认重定向到介绍页
-  if (window.location.pathname === '/') {
-    router.push('/intro');
-  }
-});
+// 移除了默认重定向到介绍页的逻辑
 </script>
 
 <style>

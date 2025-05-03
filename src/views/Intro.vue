@@ -628,7 +628,7 @@ import { Icon } from 'vant';
 
 @media (max-width: 767px) {
   .intro-container {
-    padding: 0 10px 20px;
+    padding: 10px 10px 20px;
   }
   
   .page-title {

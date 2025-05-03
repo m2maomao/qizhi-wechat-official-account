@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Import views
+import Home from '../views/Home.vue'
 import Intro from '../views/Intro.vue'
 import Honor from '../views/Honor.vue'
 import Environment from '../views/Environment.vue'
@@ -9,7 +10,8 @@ import Register from '../views/Register.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/intro'
+    name: 'Home',
+    component: Home
   },
   {
     path: '/intro',
